@@ -19,5 +19,8 @@ class Musics(models.Model):
             self.time_length = get_audio_length(self.audio_file)
         return super().save(*args,**kwargs)
 
+    def __str__(self) -> str:
+        return self.title+" "+"by"+" "+self.artist
+
 class Album(models.Model):
     name = models.CharField(max_length=500)  
