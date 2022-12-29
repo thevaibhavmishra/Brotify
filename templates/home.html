@@ -36,7 +36,7 @@ Spotify: The world of better music
     <div class="relative">
       <img
         src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-        class="object-cover">
+        class="music-image">
       <div class="absolute p-4 inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-gray-900 backdrop backdrop-blur-5 text-white">
         <h3 class="font-bold artist">Super Artist</h3>
         <span class="opacity-70 song_title">Albumtitle</span>
@@ -116,7 +116,7 @@ Spotify: The world of better music
   const song_title = document.querySelector(".song_title")
   const artist = document.querySelector(".artist")
   const album = document.querySelector(".album")
-  const music_img = document.querySelector(".music_img")
+  const music_img = document.querySelector(".object-cover")
 
   let music_index= 0
   
@@ -129,6 +129,7 @@ Spotify: The world of better music
     player.src = `/media/${musics[music_index].audio_file}`
     song_title.textContent=musics[music_index].title
     artist.textContent= musics[music_index].artist
+    console.log(` This is umage source .. ${musics[music_index].cover_page}`)
     music_img.setAttribute('src',`/media/${musics[music_index].cover_page}`)
     
     if (musics[music_index].album != null){

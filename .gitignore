@@ -1,0 +1,5 @@
+*.mp3
+*.jpg
+db.sqlite3
+*/*/*.pyc
+*/*/*/*.pyc
