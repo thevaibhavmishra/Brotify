@@ -1,0 +1,5 @@
+django==3.2.13
+django-tailwind==1.2.0
+mutagen==1.45.1
+pillow==8.1.2
+wheel==0.37.1
